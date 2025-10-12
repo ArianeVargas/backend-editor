@@ -1,11 +1,9 @@
-import mysql from 'mysql2/promise';
+import pkg from 'pg';
+const { Pool } = pkg;
 
-export const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',          
-  password: 'MiPass123!', 
-  database: 'editor_db',   
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
+export const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, 
+  },
 });
