@@ -1,5 +1,5 @@
 import express from 'express';
-import { pool } from '../elastic.js';
+import { esClient } from '../elastic.js';
 
 const router = express.Router();
 
