@@ -8,8 +8,10 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^9.2.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "mysql2": "^3.15.2",
     "pg": "^8.16.3"
   },
   "devDependencies": {
